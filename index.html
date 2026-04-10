@@ -179,7 +179,11 @@
         .hero { padding: 40px 4% 20px; }
         .hero-name { font-size: 16px; }
         .hero-role { font-size: 11px; }
-        h1 { font-size: clamp(28px, 12vw, 50px); }
+        h1 { 
+            font-size: 2.2em; /* Fixed a more readable size */
+            letter-spacing: normal; /* Remove letter spacing to prevent overflow */
+            line-height: 1.1; /* Adjust line height for better readability */
+        }
         .hero-loc { font-size: 12px; margin-bottom: 30px; }
         .btns { gap: 10px; }
         .bp, .bs { padding: 15px 25px; font-size: 11px; }
