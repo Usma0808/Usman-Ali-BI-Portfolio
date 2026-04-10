@@ -29,9 +29,20 @@
     }
 
     nav{position:sticky;top:0;z-index:100;background:rgba(7,9,15,0.85);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:12px 6%;backdrop-filter:blur(20px);}
+    .nav-logo{
+        display: flex; /* Make logo and text side-by-side */
+        align-items: center; /* Vertically align them */
+    }
     .mono-logo{width:45px;height:45px;border:2px solid var(--c);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:16px;font-weight:700;color:var(--c);box-shadow: 0 0 15px var(--c-dim);flex-shrink: 0;}
-    .nav-id{margin-left:15px;}
-    .nav-name-top{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.5px;}
+    .nav-id{margin-left:15px; display: flex; align-items: center;} /* Adjusted to be a flex container */
+    .nav-name-top{
+        font-family:'Syne',sans-serif;
+        font-size:18px;
+        font-weight:800;
+        letter-spacing:-0.5px;
+        color: var(--c); /* Apply the cyan color */
+        margin-right: 15px; /* Space between name and potential next element */
+    }
     .nav-links{display:flex;gap:30px;}
     .nav-links a{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:0.3s;}
     .nav-links a:hover{color:var(--c);}
@@ -183,6 +194,10 @@
             letter-spacing: 1px;
             padding: 5px 0; /* Add some padding to clickable area */
         }
+        .nav-name-top {
+            font-size: 16px; /* Adjust size for small screens */
+            margin-right: 0; /* Remove extra margin */
+        }
 
         .btns a { width: 100%; }
         .stats-grid { grid-template-columns: 1fr; }
@@ -202,7 +217,7 @@
         nav { padding: 10px 4%; }
         .mono-logo { width: 40px; height: 40px; font-size: 14px; }
         .nav-id { margin-left: 10px; }
-        .nav-name-top { font-size: 16px; }
+        .nav-name-top { font-size: 14px; /* Even smaller for very small screens */ }
         .hero { padding: 40px 4% 20px; }
         .hero-name { font-size: 16px; }
         .hero-role { font-size: 11px; }
@@ -238,6 +253,7 @@
   <div class="nav-logo">
     <div class="mono-logo">UA</div>
     <div class="nav-id">
+      <div class="nav-name-top">Usman Ali</div> <!-- Added "Usman Ali" here -->
     </div>
   </div>
   <div class="nav-links">
