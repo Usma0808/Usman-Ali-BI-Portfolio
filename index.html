@@ -156,7 +156,34 @@
     }
 
     @media(max-width:600px){
-        .nav-links { display: none; }
+        /* Adjust nav for wrapping */
+        nav {
+            flex-direction: column; /* Stack logo and links vertically */
+            align-items: flex-start; /* Align items to the start */
+            padding-bottom: 0; /* Adjust padding for links below */
+        }
+        .nav-logo {
+            width: 100%; /* Make logo take full width */
+            display: flex;
+            justify-content: space-between; /* Space out logo and potential future menu icon */
+            align-items: center;
+            padding-bottom: 12px; /* Add space below logo */
+        }
+        .nav-links { 
+            display: flex; /* Make links visible */
+            flex-wrap: wrap; /* Allow links to wrap */
+            width: 100%; /* Take full width */
+            justify-content: space-around; /* Distribute links evenly */
+            gap: 10px; /* Smaller gap between links */
+            padding: 10px 0; /* Add vertical padding */
+            border-top: 1px solid var(--border); /* Separator */
+        }
+        .nav-links a {
+            font-size: 10px; /* Smaller font size for links */
+            letter-spacing: 1px;
+            padding: 5px 0; /* Add some padding to clickable area */
+        }
+
         .btns a { width: 100%; }
         .stats-grid { grid-template-columns: 1fr; }
         h1 { letter-spacing: -1px; }
